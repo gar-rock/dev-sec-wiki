@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Dev-sec-wiki",
+    "title": "Home",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nApr 21, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Python- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nApr 21, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/python/index.html",
+    "href": "posts/python/index.html",
+    "title": "Python- Virtual Environments",
+    "section": "",
+    "text": "Python virtual enviornments have many use cases for developing. Many of the benefits come from version control between the host development machine and the target deployment environment.\nImagine that you are running multiple scripts on the same machine, which require different versions of python modules. ie. my_script_1.py -&gt; requires requests&lt;2.20.0 my_script_2.py -&gt; requires requests&gt;=2.30.0\nFor whatever reason you have to run two seperate version on the same host.. This simply does not work without virtual environments, or venv for short.\nA venv is typically tied to a working directory. ie.\nmainy.py\nmy_data.json\nvenv\nThe venv is a directory that contains all of the necessary binaries to run\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "about.html",
@@ -26,5 +26,12 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
   }
 ]
