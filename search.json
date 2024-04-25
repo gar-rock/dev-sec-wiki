@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Python- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown Cheat Sheet\n\n\n\n\n\n\nmarkdown\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nStolen from markdownguiade.org\n\n\n\n\n\n\nNo matching items"
+    "text": "Python- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nSSH keys - Useful Information\n\n\n\n\n\n\nssh\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown Cheat Sheet\n\n\n\n\n\n\nmarkdown\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nStolen from markdownguiade.org\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/random/index.html",
@@ -47,6 +47,13 @@
     "title": "About",
     "section": "",
     "text": "This wiki is managed by Garrison LeRock via Quarto and Github Pages. The public repo can be found here.\nMost of the articles found here are what I might use on a day-to-day basis. When I forget a certain detail it’s nice to have it documented and easily referenceable."
+  },
+  {
+    "objectID": "posts/random/ssh_keys.html",
+    "href": "posts/random/ssh_keys.html",
+    "title": "SSH keys - Useful Information",
+    "section": "",
+    "text": "Intro\nAs a developer you will typically use SSH keys for pushing/pulling code on a remote repo. You will need to generate a public and private key locally on your machine, and then upload your public key to your repo settings. Typically you will sign your key with a unique password that only you know.\n\n\nUseful Information\nYou can generate a new SSH key on your local linux machine with this command.\nssh-keygen -t ed25519 -C \"your_email@example.com\"\nIf you have multiple Keys to use for various remote repos… for example Github and GitLab, or maybe one for your company’s GitHub, and another for your private GitHub, you can update the config file in the .ssh directory to point to various keys.\n\nCreate the config file is it doesn’t exist touch ~/.ssh/config\nEdit the file nano ~/.ssh/config\nHere is an example for when you might have 3 accounts\n\n# github account\nHost github.com\nHostName github.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_myaccount_github\n\n# gitlab account\nHost gitlab.com\nHostName gitlab.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_myaccount_gitlab\n\n# gitlab company account\nHost gitlab.my_company.com\nHostName gitlab.my_company.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_mycompanyaccount_gitlab"
   },
   {
     "objectID": "posts/python/venv.html",

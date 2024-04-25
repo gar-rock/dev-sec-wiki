@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/python/venv.html",
+      "/posts/random/ssh_keys.html",
       "/posts/random/index.html"
     ]
   }
