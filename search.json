@@ -4,34 +4,55 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Python- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nApr 21, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Python- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown Cheat Sheet\n\n\n\n\n\n\nmarkdown\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nStolen from markdownguiade.org\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/python/index.html",
-    "href": "posts/python/index.html",
-    "title": "Python- Virtual Environments",
+    "objectID": "posts/random/index.html",
+    "href": "posts/random/index.html",
+    "title": "Markdown Cheat Sheet",
     "section": "",
-    "text": "Python virtual enviornments have many use cases for developing. Many of the benefits come from version control between the host development machine and the target deployment environment.\nImagine that you are running multiple scripts on the same machine, which require different versions of python modules. ie. my_script_1.py -&gt; requires requests&lt;2.20.0 my_script_2.py -&gt; requires requests&gt;=2.30.0\nFor whatever reason you have to run two seperate version on the same host.. This simply does not work without virtual environments, or venv for short.\nA venv is typically tied to a working directory. ie.\nmainy.py\nmy_data.json\nvenv\nThe venv is a directory that contains all of the necessary binaries to run\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Thanks for visiting The Markdown Guide!\nThis Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for basic syntax and extended syntax.\n\n\nThese are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements."
+  },
+  {
+    "objectID": "posts/random/index.html#basic-syntax",
+    "href": "posts/random/index.html#basic-syntax",
+    "title": "Markdown Cheat Sheet",
+    "section": "",
+    "text": "These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements."
+  },
+  {
+    "objectID": "posts/random/index.html#h2",
+    "href": "posts/random/index.html#h2",
+    "title": "Markdown Cheat Sheet",
+    "section": "H2",
+    "text": "H2\n\nH3\n\n\nBold\nbold text\n\n\nItalic\nitalicized text\n\n\nBlockquote\n\nblockquote\n\n\n\nOrdered List\n\nFirst item\nSecond item\nThird item\n\n\n\nUnordered List\n\nFirst item\nSecond item\nThird item\n\n\n\nCode\ncode\n\n\nHorizontal Rule\n\n\n\nLink\nMarkdown Guide\n\n\nImage\n\n\n\nalt text"
+  },
+  {
+    "objectID": "posts/random/index.html#extended-syntax",
+    "href": "posts/random/index.html#extended-syntax",
+    "title": "Markdown Cheat Sheet",
+    "section": "Extended Syntax",
+    "text": "Extended Syntax\nThese elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.\n\nTable\n\n\n\nSyntax\nDescription\n\n\n\n\nHeader\nTitle\n\n\nParagraph\nText\n\n\n\n\n\nFenced Code Block\n{\n  \"firstName\": \"John\",\n  \"lastName\": \"Smith\",\n  \"age\": 25\n}\n\n\nFootnote\nHere’s a sentence with a footnote. 1\n\n\nHeading ID\n\n\nMy Great Heading\n\n\nDefinition List\n\nterm\n\ndefinition\n\n\n\n\nStrikethrough\nThe world is flat.\n\n\nTask List\n\nWrite the press release\nUpdate the website\nContact the media\n\n\n\nEmoji\nThat is so funny! :joy:\n(See also Copying and Pasting Emoji)\n\n\nHighlight\nI need to highlight these ==very important words==.\n\n\nSubscript\nH2O\n\n\nSuperscript\nX2"
+  },
+  {
+    "objectID": "posts/random/index.html#footnotes",
+    "href": "posts/random/index.html#footnotes",
+    "title": "Markdown Cheat Sheet",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis is the footnote.↩︎"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "This wiki is managed by Garrison LeRock via Quarto and Github Pages. The public repo can be found here.\nMost of the articles found here are what I might use on a day-to-day basis. When I forget a certain detail it’s nice to have it documented and easily referenceable."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/python/venv.html",
+    "href": "posts/python/venv.html",
+    "title": "Python- Virtual Environments",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
+    "text": "Python virtual enviornments have many use cases for developing. Many of the benefits come from version control between the host development machine and the target deployment environment.\nImagine that you are running multiple scripts on the same machine, which require different versions of python modules. ie. my_script_1.py -&gt; requires requests&lt;2.20.0 my_script_2.py -&gt; requires requests&gt;=2.30.0\nFor whatever reason you have to run two seperate version on the same host.. This simply does not work without virtual environments, or venv for short.\nA venv is typically tied to a working directory. ie.\nmainy.py\nmy_data.json\nvenv\nThe venv is a directory that contains all of the necessary binaries to run\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   }
 ]
