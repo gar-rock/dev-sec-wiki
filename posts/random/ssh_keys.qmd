@@ -1,0 +1,49 @@
+---
+title: "SSH keys - Useful Information"
+author: "Garrison LeRock"
+date: "2024-04-24"
+categories: [ssh, random]
+image: "keys.jpg"
+---
+# Intro
+As a developer you will typically use SSH keys for pushing/pulling code on a remote repo.
+You will need to generate a public and private key locally on your machine, and then upload your public key to your repo settings.
+Typically you will sign your key with a unique password that only you know. 
+
+
+
+# Useful Information
+You can generate a new SSH key on your local linux machine with this command.
+
+`ssh-keygen -t ed25519 -C "your_email@example.com"`
+
+
+If you have multiple Keys to use for various remote repos... for example Github and GitLab, or maybe one for your company's GitHub, and another for your private GitHub, you 
+can update the config file in the `.ssh` directory to point to various keys. 
+
+1. Create the config file is it doesn't exist
+`touch ~/.ssh/config`
+
+2. Edit the file
+`nano ~/.ssh/config`
+
+3. Here is an example for when you might have 3 accounts
+```
+# github account
+Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_myaccount_github
+
+# gitlab account
+Host gitlab.com
+HostName gitlab.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_myaccount_gitlab
+
+# gitlab company account
+Host gitlab.my_company.com
+HostName gitlab.my_company.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_mycompanyaccount_gitlab
+```
