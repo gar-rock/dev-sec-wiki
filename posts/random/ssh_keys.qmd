@@ -8,7 +8,7 @@ image: "keys.jpg"
 # Intro
 As a developer you will typically use SSH keys for pushing/pulling code on a remote repo.
 You will need to generate a public and private key locally on your machine, and then upload your public key to your repo settings.
-Typically you will sign your key with a unique password that only you know. 
+Typically you will sign your private key with a unique password that only you know. 
 
 
 
