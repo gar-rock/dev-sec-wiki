@@ -1,0 +1,29 @@
+---
+title: "Python- Virtual Environments"
+author: "Garrison LeRock"
+date: "2024-04-25"
+categories: [python]
+---
+
+Python virtual enviornments have many use cases for developing. 
+Many of the benefits come from version control between the host development machine and the target deployment environment. 
+
+Imagine that you are running multiple scripts on the same machine, which require different versions of python modules.
+ie. 
+my_script_1.py -> requires requests<2.20.0
+my_script_2.py -> requires requests>=2.30.0
+
+For whatever reason you have to run two seperate version on the same host.. This simply does not work without virtual environments, or venv for short. 
+
+A venv is typically tied to a working directory. 
+ie.
+
+    mainy.py
+    my_data.json
+    venv
+
+The venv is a directory that contains all of the necessary binaries to run 
+
+![](thumbnail.jpg)
+
+Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
