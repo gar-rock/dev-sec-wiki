@@ -10,5 +10,14 @@
   },
   "posts/post-with-code/index.qmd": {
     "index.html": "d19cee72"
+  },
+  "posts/python/index.qmd": {
+    "index.html": "5a3d3fa9"
+  },
+  "posts/random/index.qmd": {
+    "index.html": "1f0e220f"
+  },
+  "posts/python/venv.qmd": {
+    "venv.html": "6c98fedc"
   }
 }

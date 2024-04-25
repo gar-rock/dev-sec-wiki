@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Stolen from markdownguiade.org">
+<meta name="dcterms.date" content="2024-04-24">
 
-<title>Dev-Sec-Wiki - Home</title>
+<title>Dev-Sec-Wiki - Markdown Cheat Sheet</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +68,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Dev-Sec-Wiki</span>
     </a>
   </div>
@@ -149,7 +91,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,113 +114,210 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Home</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Markdown Cheat Sheet</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">markdown</div>
+                <div class="quarto-category">random</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Stolen from <a href="https://www.markdownguide.org/cheat-sheet/">markdownguiade.org</a> </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 24, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="markdown">markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="random">random <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="markdown-cheat-sheet" class="level1">
+<h1>Markdown Cheat Sheet</h1>
+<p>Thanks for visiting <a href="https://www.markdownguide.org">The Markdown Guide</a>!</p>
+<p>This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for <a href="https://www.markdownguide.org/basic-syntax/">basic syntax</a> and <a href="https://www.markdownguide.org/extended-syntax/">extended syntax</a>.</p>
+<section id="basic-syntax" class="level2">
+<h2 class="anchored" data-anchor-id="basic-syntax">Basic Syntax</h2>
+<p>These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.</p>
+<section id="heading" class="level3">
+<h3 class="anchored" data-anchor-id="heading">Heading</h3>
+</section>
+</section>
+</section>
+<section id="h1" class="level1">
+<h1>H1</h1>
+<section id="h2" class="level2">
+<h2 class="anchored" data-anchor-id="h2">H2</h2>
+<section id="h3" class="level3">
+<h3 class="anchored" data-anchor-id="h3">H3</h3>
+</section>
+<section id="bold" class="level3">
+<h3 class="anchored" data-anchor-id="bold">Bold</h3>
+<p><strong>bold text</strong></p>
+</section>
+<section id="italic" class="level3">
+<h3 class="anchored" data-anchor-id="italic">Italic</h3>
+<p><em>italicized text</em></p>
+</section>
+<section id="blockquote" class="level3">
+<h3 class="anchored" data-anchor-id="blockquote">Blockquote</h3>
+<blockquote class="blockquote">
+<p>blockquote</p>
+</blockquote>
+</section>
+<section id="ordered-list" class="level3">
+<h3 class="anchored" data-anchor-id="ordered-list">Ordered List</h3>
+<ol type="1">
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+</section>
+<section id="unordered-list" class="level3">
+<h3 class="anchored" data-anchor-id="unordered-list">Unordered List</h3>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ul>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p><code>code</code></p>
+</section>
+<section id="horizontal-rule" class="level3">
+<h3 class="anchored" data-anchor-id="horizontal-rule">Horizontal Rule</h3>
+<hr>
+</section>
+<section id="link" class="level3">
+<h3 class="anchored" data-anchor-id="link">Link</h3>
+<p><a href="https://www.markdownguide.org">Markdown Guide</a></p>
+</section>
+<section id="image" class="level3">
+<h3 class="anchored" data-anchor-id="image">Image</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.markdownguide.org/assets/images/tux.png" class="img-fluid figure-img"></p>
+<figcaption>alt text</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="extended-syntax" class="level2">
+<h2 class="anchored" data-anchor-id="extended-syntax">Extended Syntax</h2>
+<p>These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.</p>
+<section id="table" class="level3">
+<h3 class="anchored" data-anchor-id="table">Table</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr class="even">
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fenced-code-block" class="level3">
+<h3 class="anchored" data-anchor-id="fenced-code-block">Fenced Code Block</h3>
+<pre><code>{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}</code></pre>
+</section>
+<section id="footnote" class="level3">
+<h3 class="anchored" data-anchor-id="footnote">Footnote</h3>
+<p>Here’s a sentence with a footnote. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="heading-id" class="level3">
+<h3 class="anchored" data-anchor-id="heading-id">Heading ID</h3>
+</section>
+<section id="custom-id" class="level3">
+<h3 class="anchored" data-anchor-id="custom-id">My Great Heading</h3>
+</section>
+<section id="definition-list" class="level3">
+<h3 class="anchored" data-anchor-id="definition-list">Definition List</h3>
+<dl>
+<dt>term</dt>
+<dd>
+definition
+</dd>
+</dl>
+</section>
+<section id="strikethrough" class="level3">
+<h3 class="anchored" data-anchor-id="strikethrough">Strikethrough</h3>
+<p><del>The world is flat.</del></p>
+</section>
+<section id="task-list" class="level3">
+<h3 class="anchored" data-anchor-id="task-list">Task List</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Write the press release</label></li>
+<li><label><input type="checkbox">Update the website</label></li>
+<li><label><input type="checkbox">Contact the media</label></li>
+</ul>
+</section>
+<section id="emoji" class="level3">
+<h3 class="anchored" data-anchor-id="emoji">Emoji</h3>
+<p>That is so funny! :joy:</p>
+<p>(See also <a href="https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji">Copying and Pasting Emoji</a>)</p>
+</section>
+<section id="highlight" class="level3">
+<h3 class="anchored" data-anchor-id="highlight">Highlight</h3>
+<p>I need to highlight these ==very important words==.</p>
+</section>
+<section id="subscript" class="level3">
+<h3 class="anchored" data-anchor-id="subscript">Subscript</h3>
+<p>H<sub>2</sub>O</p>
+</section>
+<section id="superscript" class="level3">
+<h3 class="anchored" data-anchor-id="superscript">Superscript</h3>
+<p>X<sup>2</sup></p>
 
 
+</section>
+</section>
+</section>
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="python" data-listing-date-sort="1714021200000" data-listing-file-modified-sort="1714071048757" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
-<div class="thumbnail">
-<p><a href="./posts/python/venv.html" class="no-external"></a></p><a href="./posts/python/venv.html" class="no-external">
-<p><img src="./posts/python/snake.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/python/venv.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/python/venv.html" class="no-external">Python- Virtual Environments</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/python/venv.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/python/venv.html" class="no-external">Python virtual enviornments have many use cases for developing. Many of the benefits come from version control between the host development machine and the target deployment…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/python/venv.html" class="no-external">
-<div class="listing-date">
-Apr 25, 2024
-</div>
-<div class="listing-author">
-Garrison LeRock
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="markdown,random" data-listing-date-sort="1713934800000" data-listing-file-modified-sort="1714071023487" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="206">
-<div class="thumbnail">
-<p><a href="./posts/random/index.html" class="no-external"></a></p><a href="./posts/random/index.html" class="no-external">
-<p><img src="./posts/random/markdown.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/random/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/random/index.html" class="no-external">Markdown Cheat Sheet</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/random/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('markdown'); return false;">
-markdown
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('random'); return false;">
-random
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/random/index.html" class="no-external">Thanks for visiting The Markdown Guide!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/random/index.html" class="no-external">
-<div class="listing-date">
-Apr 24, 2024
-</div>
-</a><div class="listing-author"><a href="./posts/random/index.html" class="no-external">
-Stolen from </a><a href="https://www.markdownguide.org/cheat-sheet/">markdownguiade.org</a>
-</div>
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<ol>
+<li id="fn1"><p>This is the footnote.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

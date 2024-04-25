@@ -3,6 +3,7 @@ title: "Python- Virtual Environments"
 author: "Garrison LeRock"
 date: "2024-04-25"
 categories: [python]
+image: "snake.png"
 ---
 
 Python virtual enviornments have many use cases for developing. 
