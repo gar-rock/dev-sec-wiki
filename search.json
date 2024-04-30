@@ -4,42 +4,21 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Python- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nSSH keys - Useful Information\n\n\n\n\n\n\nssh\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown Cheat Sheet\n\n\n\n\n\n\nmarkdown\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nStolen from markdownguiade.org\n\n\n\n\n\n\nNo matching items"
+    "text": "Git - Cheat Sheet\n\n\n\n\n\n\ngit\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nAWS - API Gateway\n\n\n\n\n\n\naws\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nPython- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown Cheat Sheet\n\n\n\n\n\n\nmarkdown\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nStolen from markdownguiade.org\n\n\n\n\n\n\n\n\n\n\n\n\nSSH keys - Useful Information\n\n\n\n\n\n\nssh\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/random/index.html",
-    "href": "posts/random/index.html",
-    "title": "Markdown Cheat Sheet",
+    "objectID": "posts/aws/apigw.html",
+    "href": "posts/aws/apigw.html",
+    "title": "AWS - API Gateway",
     "section": "",
-    "text": "Thanks for visiting The Markdown Guide!\nThis Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for basic syntax and extended syntax.\n\n\nThese are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements."
+    "text": "What Is It?\nA service that allows you to expose your compute resources and other services to the internet or interanl VPC. There are a number of security controls that are availble in APIGW that can be used to secure your compute."
   },
   {
-    "objectID": "posts/random/index.html#basic-syntax",
-    "href": "posts/random/index.html#basic-syntax",
-    "title": "Markdown Cheat Sheet",
+    "objectID": "posts/random/ssh_keys.html",
+    "href": "posts/random/ssh_keys.html",
+    "title": "SSH keys - Useful Information",
     "section": "",
-    "text": "These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements."
-  },
-  {
-    "objectID": "posts/random/index.html#h2",
-    "href": "posts/random/index.html#h2",
-    "title": "Markdown Cheat Sheet",
-    "section": "H2",
-    "text": "H2\n\nH3\n\n\nBold\nbold text\n\n\nItalic\nitalicized text\n\n\nBlockquote\n\nblockquote\n\n\n\nOrdered List\n\nFirst item\nSecond item\nThird item\n\n\n\nUnordered List\n\nFirst item\nSecond item\nThird item\n\n\n\nCode\ncode\n\n\nHorizontal Rule\n\n\n\nLink\nMarkdown Guide\n\n\nImage\n\n\n\nalt text"
-  },
-  {
-    "objectID": "posts/random/index.html#extended-syntax",
-    "href": "posts/random/index.html#extended-syntax",
-    "title": "Markdown Cheat Sheet",
-    "section": "Extended Syntax",
-    "text": "Extended Syntax\nThese elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.\n\nTable\n\n\n\nSyntax\nDescription\n\n\n\n\nHeader\nTitle\n\n\nParagraph\nText\n\n\n\n\n\nFenced Code Block\n{\n  \"firstName\": \"John\",\n  \"lastName\": \"Smith\",\n  \"age\": 25\n}\n\n\nFootnote\nHere’s a sentence with a footnote. 1\n\n\nHeading ID\n\n\nMy Great Heading\n\n\nDefinition List\n\nterm\n\ndefinition\n\n\n\n\nStrikethrough\nThe world is flat.\n\n\nTask List\n\nWrite the press release\nUpdate the website\nContact the media\n\n\n\nEmoji\nThat is so funny! :joy:\n(See also Copying and Pasting Emoji)\n\n\nHighlight\nI need to highlight these ==very important words==.\n\n\nSubscript\nH2O\n\n\nSuperscript\nX2"
-  },
-  {
-    "objectID": "posts/random/index.html#footnotes",
-    "href": "posts/random/index.html#footnotes",
-    "title": "Markdown Cheat Sheet",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThis is the footnote.↩︎"
+    "text": "Intro\nAs a developer you will typically use SSH keys for pushing/pulling code on a remote repo. You will need to generate a public and private key locally on your machine, and then upload your public key to your repo settings. Typically you will sign your private key (with a unique password) that only you know.\n\n\nUseful Information\nYou can generate a new SSH key on your local linux machine with this command.\nssh-keygen -t ed25519 -C \"your_email@example.com\"\nIf you have multiple Keys to use for various remote repos… for example Github and GitLab, or maybe one for your company’s GitHub, and another for your private GitHub, you can update the config file in the .ssh directory to point to various keys.\n\nCreate the config file is it doesn’t exist touch ~/.ssh/config\nEdit the file nano ~/.ssh/config\nHere is an example for when you might have 3 accounts\n\n# github account\nHost github.com\nHostName github.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_myaccount_github\n\n# gitlab account\nHost gitlab.com\nHostName gitlab.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_myaccount_gitlab\n\n# gitlab company account\nHost gitlab.my_company.com\nHostName gitlab.my_company.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_mycompanyaccount_gitlab"
   },
   {
     "objectID": "about.html",
@@ -49,11 +28,60 @@
     "text": "This wiki is managed by Garrison LeRock via Quarto and Github Pages. The public repo can be found here.\nMost of the articles found here are what I might use on a day-to-day basis. When I forget a certain detail it’s nice to have it documented and easily referenceable."
   },
   {
-    "objectID": "posts/random/ssh_keys.html",
-    "href": "posts/random/ssh_keys.html",
-    "title": "SSH keys - Useful Information",
+    "objectID": "posts/random/markdown.html",
+    "href": "posts/random/markdown.html",
+    "title": "Markdown Cheat Sheet",
     "section": "",
-    "text": "Intro\nAs a developer you will typically use SSH keys for pushing/pulling code on a remote repo. You will need to generate a public and private key locally on your machine, and then upload your public key to your repo settings. Typically you will sign your private key with a unique password that only you know.\n\n\nUseful Information\nYou can generate a new SSH key on your local linux machine with this command.\nssh-keygen -t ed25519 -C \"your_email@example.com\"\nIf you have multiple Keys to use for various remote repos… for example Github and GitLab, or maybe one for your company’s GitHub, and another for your private GitHub, you can update the config file in the .ssh directory to point to various keys.\n\nCreate the config file is it doesn’t exist touch ~/.ssh/config\nEdit the file nano ~/.ssh/config\nHere is an example for when you might have 3 accounts\n\n# github account\nHost github.com\nHostName github.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_myaccount_github\n\n# gitlab account\nHost gitlab.com\nHostName gitlab.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_myaccount_gitlab\n\n# gitlab company account\nHost gitlab.my_company.com\nHostName gitlab.my_company.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_mycompanyaccount_gitlab"
+    "text": "Thanks for visiting The Markdown Guide!\nThis Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for basic syntax and extended syntax.\n\n\nThese are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements."
+  },
+  {
+    "objectID": "posts/random/markdown.html#basic-syntax",
+    "href": "posts/random/markdown.html#basic-syntax",
+    "title": "Markdown Cheat Sheet",
+    "section": "",
+    "text": "These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements."
+  },
+  {
+    "objectID": "posts/random/markdown.html#h2",
+    "href": "posts/random/markdown.html#h2",
+    "title": "Markdown Cheat Sheet",
+    "section": "H2",
+    "text": "H2\n\nH3\n\n\nBold\nbold text\n\n\nItalic\nitalicized text\n\n\nBlockquote\n\nblockquote\n\n\n\nOrdered List\n\nFirst item\nSecond item\nThird item\n\n\n\nUnordered List\n\nFirst item\nSecond item\nThird item\n\n\n\nCode\ncode\n\n\nHorizontal Rule\n\n\n\nLink\nMarkdown Guide\n\n\nImage\n\n\n\nalt text"
+  },
+  {
+    "objectID": "posts/random/markdown.html#extended-syntax",
+    "href": "posts/random/markdown.html#extended-syntax",
+    "title": "Markdown Cheat Sheet",
+    "section": "Extended Syntax",
+    "text": "Extended Syntax\nThese elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.\n\nTable\n\n\n\nSyntax\nDescription\n\n\n\n\nHeader\nTitle\n\n\nParagraph\nText\n\n\n\n\n\nFenced Code Block\n{\n  \"firstName\": \"John\",\n  \"lastName\": \"Smith\",\n  \"age\": 25\n}\n\n\nFootnote\nHere’s a sentence with a footnote. 1\n\n\nHeading ID\n\n\nMy Great Heading\n\n\nDefinition List\n\nterm\n\ndefinition\n\n\n\n\nStrikethrough\nThe world is flat.\n\n\nTask List\n\nWrite the press release\nUpdate the website\nContact the media\n\n\n\nEmoji\nThat is so funny! :joy:\n(See also Copying and Pasting Emoji)\n\n\nHighlight\nI need to highlight these ==very important words==.\n\n\nSubscript\nH2O\n\n\nSuperscript\nX2"
+  },
+  {
+    "objectID": "posts/random/markdown.html#footnotes",
+    "href": "posts/random/markdown.html#footnotes",
+    "title": "Markdown Cheat Sheet",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis is the footnote.↩︎"
+  },
+  {
+    "objectID": "posts/random/git.html",
+    "href": "posts/random/git.html",
+    "title": "Git - Cheat Sheet",
+    "section": "",
+    "text": "Here are some useful Git commands that are used\n\n\nStart a new git envionment in your current working directory git init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab) git remote add origin [url]\nConfigure user info git config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches git branch\nCreate a new local branch git branch [name]\nSwitch to another branch git switch [name]\nSwitch to a new branch git switch -c [name]\nCreate and switch to new branch, and move any changes to git branch -m [name]\n\n\n\nSave local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files] Also supports wildcards, for example git add *.py"
+  },
+  {
+    "objectID": "posts/random/git.html#init-and-create",
+    "href": "posts/random/git.html#init-and-create",
+    "title": "Git - Cheat Sheet",
+    "section": "",
+    "text": "Start a new git envionment in your current working directory git init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab) git remote add origin [url]\nConfigure user info git config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches git branch\nCreate a new local branch git branch [name]\nSwitch to another branch git switch [name]\nSwitch to a new branch git switch -c [name]\nCreate and switch to new branch, and move any changes to git branch -m [name]"
+  },
+  {
+    "objectID": "posts/random/git.html#commit-and-push",
+    "href": "posts/random/git.html#commit-and-push",
+    "title": "Git - Cheat Sheet",
+    "section": "",
+    "text": "Save local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files] Also supports wildcards, for example git add *.py"
   },
   {
     "objectID": "posts/python/venv.html",
