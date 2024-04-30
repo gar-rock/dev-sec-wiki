@@ -2,9 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/random/git.html",
+      "/posts/aws/apigw.html",
       "/posts/python/venv.html",
-      "/posts/random/ssh_keys.html",
-      "/posts/random/index.html"
+      "/posts/random/markdown.html",
+      "/posts/random/ssh_keys.html"
     ]
   }
 ]

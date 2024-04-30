@@ -1,0 +1,48 @@
+---
+title: "Git - Cheat Sheet"
+author: "Garrison LeRock"
+date: "2024-04-26"
+categories: [git, random]
+image: "git.png"
+---
+# Git Cheat Sheet
+
+Here are some useful Git commands that are used 
+
+## Init and Create
+
+Start a new git envionment in your current working directory
+`git init`
+
+Connect your current git environment/directory to an upstream remote directory (ie. github/gitlab)
+`git remote add origin [url]`
+
+Configure user info
+`git config --global user.name "[name]"`
+`git config --global user.email "[email address]"`
+
+List current local branches
+`git branch`
+
+Create a new local branch
+`git branch [name]`
+
+Switch to another branch
+`git switch [name]`
+
+Switch to a new branch 
+`git switch -c [name]`
+
+Create and switch to new branch, and move any changes to
+`git branch -m [name]`
+
+
+## Commit and Push
+
+Save local changes in current directory to a branch
+`git add .`
+
+Save specific files to branch
+`git add [name of files]`
+Also supports wildcards, for example
+`git add *.py`

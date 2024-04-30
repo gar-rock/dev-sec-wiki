@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Garrison LeRock">
-<meta name="dcterms.date" content="2024-04-24">
+<meta name="dcterms.date" content="2024-04-26">
 
-<title>Dev-Sec-Wiki - SSH keys - Useful Information</title>
+<title>Dev-Sec-Wiki - AWS - API Gateway</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,10 +115,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">SSH keys - Useful Information</h1>
+      <h1 class="title">AWS - API Gateway</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">ssh</div>
-                <div class="quarto-category">random</div>
+                <div class="quarto-category">aws</div>
               </div>
                   </div>
   </div>
@@ -136,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 24, 2024</p>
+        <p class="date">April 26, 2024</p>
       </div>
     </div>
     
@@ -155,37 +154,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="intro" class="level1">
-<h1>Intro</h1>
-<p>As a developer you will typically use SSH keys for pushing/pulling code on a remote repo. You will need to generate a public and private key locally on your machine, and then upload your public key to your repo settings. Typically you will sign your private key (with a unique password) that only you know.</p>
-</section>
-<section id="useful-information" class="level1">
-<h1>Useful Information</h1>
-<p>You can generate a new SSH key on your local linux machine with this command.</p>
-<p><code>ssh-keygen -t ed25519 -C "your_email@example.com"</code></p>
-<p>If you have multiple Keys to use for various remote repos… for example Github and GitLab, or maybe one for your company’s GitHub, and another for your private GitHub, you can update the config file in the <code>.ssh</code> directory to point to various keys.</p>
-<ol type="1">
-<li><p>Create the config file is it doesn’t exist <code>touch ~/.ssh/config</code></p></li>
-<li><p>Edit the file <code>nano ~/.ssh/config</code></p></li>
-<li><p>Here is an example for when you might have 3 accounts</p></li>
-</ol>
-<pre><code># github account
-Host github.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa_myaccount_github
-
-# gitlab account
-Host gitlab.com
-HostName gitlab.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa_myaccount_gitlab
-
-# gitlab company account
-Host gitlab.my_company.com
-HostName gitlab.my_company.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa_mycompanyaccount_gitlab</code></pre>
+<section id="what-is-it" class="level1">
+<h1>What Is It?</h1>
+<p>A service that allows you to expose your compute resources and other services to the internet or interanl VPC. There are a number of security controls that are availble in APIGW that can be used to secure your compute.</p>
 
 
 </section>

@@ -1,0 +1,11 @@
+---
+title: "AWS - API Gateway"
+author: "Garrison LeRock"
+date: "2024-04-26"
+categories: [aws]
+image: "apigw.png"
+---
+
+# What Is It?
+A service that allows you to expose your compute resources and other services to the internet or interanl VPC.
+There are a number of security controls that are availble in APIGW that can be used to secure your compute. 

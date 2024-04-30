@@ -22,5 +22,14 @@
   },
   "posts/random/ssh_keys.qmd": {
     "ssh_keys.html": "01111d0f"
+  },
+  "posts/aws/apigw.qmd": {
+    "apigw.html": "6756e012"
+  },
+  "posts/random/markdown.qmd": {
+    "markdown.html": "b3f429e2"
+  },
+  "posts/random/git.qmd": {
+    "git.html": "37b7240f"
   }
 }
