@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Git - Cheat Sheet\n\n\n\n\n\n\ngit\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nAWS - API Gateway\n\n\n\n\n\n\naws\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nPython- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown Cheat Sheet\n\n\n\n\n\n\nmarkdown\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nStolen from markdownguiade.org\n\n\n\n\n\n\n\n\n\n\n\n\nSSH keys - Useful Information\n\n\n\n\n\n\nssh\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\nNo matching items"
+    "text": "HTTP - Basic Overview\n\n\n\n\n\n\nhttp\n\n\nrandom\n\n\n\n\n\n\n\n\n\nMay 2, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nGit - Cheat Sheet\n\n\n\n\n\n\ngit\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nAWS - API Gateway\n\n\n\n\n\n\naws\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nPython- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown Cheat Sheet\n\n\n\n\n\n\nmarkdown\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nStolen from markdownguiade.org\n\n\n\n\n\n\n\n\n\n\n\n\nSSH keys - Useful Information\n\n\n\n\n\n\nssh\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/python/index.html",
@@ -74,7 +74,7 @@
     "href": "posts/aws/apigw.html",
     "title": "AWS - API Gateway",
     "section": "",
-    "text": "What Is It?\nA service that allows you to expose your compute resources and other services to the internet or interanl VPC. There are a number of security controls that are availble in APIGW that can be used to secure your compute."
+    "text": "API Gateway is a web based service that allows you to expose your compute resources and other services to the internet or internal VPC. There are a number of security controls that are availble in APIGW that can be used to secure your compute."
   },
   {
     "objectID": "posts/random/markdown.html",
@@ -116,20 +116,69 @@
     "href": "posts/random/git.html",
     "title": "Git - Cheat Sheet",
     "section": "",
-    "text": "Here are some useful Git commands that are used\n\n\nStart a new git envionment in your current working directory git init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab) git remote add origin [url]\nConfigure user info git config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches git branch\nCreate a new local branch git branch [name]\nSwitch to another branch git switch [name]\nSwitch to a new branch git switch -c [name]\nCreate and switch to new branch, and move any changes to git branch -m [name]\n\n\n\nSave local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files] Also supports wildcards, for example git add *.py"
+    "text": "Here are some useful Git commands that are used\n\n\nStart a new git envionment in your current working directory\ngit init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab)\ngit remote add origin [url]\nConfigure user info\ngit config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches\ngit branch\nCreate a new local branch\ngit branch [name]\nSwitch to another branch\ngit switch [name]\nSwitch to a new branch\ngit switch -c [name]\nCreate and switch to new branch, and move any changes to\ngit branch -m [name]\n\n\n\nSave local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files]\nAlso supports wildcards, for example git add *.py\n\n\n\ncaution: it will delete all untracked files\ngit clean -d -f and then\ngit pull origin master"
   },
   {
     "objectID": "posts/random/git.html#init-and-create",
     "href": "posts/random/git.html#init-and-create",
     "title": "Git - Cheat Sheet",
     "section": "",
-    "text": "Start a new git envionment in your current working directory git init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab) git remote add origin [url]\nConfigure user info git config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches git branch\nCreate a new local branch git branch [name]\nSwitch to another branch git switch [name]\nSwitch to a new branch git switch -c [name]\nCreate and switch to new branch, and move any changes to git branch -m [name]"
+    "text": "Start a new git envionment in your current working directory\ngit init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab)\ngit remote add origin [url]\nConfigure user info\ngit config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches\ngit branch\nCreate a new local branch\ngit branch [name]\nSwitch to another branch\ngit switch [name]\nSwitch to a new branch\ngit switch -c [name]\nCreate and switch to new branch, and move any changes to\ngit branch -m [name]"
   },
   {
     "objectID": "posts/random/git.html#commit-and-push",
     "href": "posts/random/git.html#commit-and-push",
     "title": "Git - Cheat Sheet",
     "section": "",
-    "text": "Save local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files] Also supports wildcards, for example git add *.py"
+    "text": "Save local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files]\nAlso supports wildcards, for example git add *.py"
+  },
+  {
+    "objectID": "posts/aws/apigw.html#what-is-it",
+    "href": "posts/aws/apigw.html#what-is-it",
+    "title": "AWS - API Gateway",
+    "section": "",
+    "text": "API Gateway is a web based service that allows you to expose your compute resources and other services to the internet or internal VPC. There are a number of security controls that are availble in APIGW that can be used to secure your compute."
+  },
+  {
+    "objectID": "posts/aws/apigw.html#in-the-console",
+    "href": "posts/aws/apigw.html#in-the-console",
+    "title": "AWS - API Gateway",
+    "section": "In the console",
+    "text": "In the console\nTo view the APIGWs navigate to the service: \nIf there are any APIs in the account then they will be listed here:  You can filter based on the API name or API ID.\nClick on the API to view details:  Notice the API ID and the available methods"
+  },
+  {
+    "objectID": "posts/aws/apigw.html#use-both",
+    "href": "posts/aws/apigw.html#use-both",
+    "title": "AWS - API Gateway",
+    "section": "Use Both:",
+    "text": "Use Both:"
+  },
+  {
+    "objectID": "posts/aws/apigw.html#deployment",
+    "href": "posts/aws/apigw.html#deployment",
+    "title": "AWS - API Gateway",
+    "section": "Deployment:",
+    "text": "Deployment:\nTo expose an API to your clients, it has to be deployed in a “stage”. This stage will contain extra configurations such are rate limiting, logging settings, ACLs, canary settings, certificates and caching behavior.\nNavigate to the stages page to view the available Invoke URL:"
+  },
+  {
+    "objectID": "posts/aws/apigw.html#authentication",
+    "href": "posts/aws/apigw.html#authentication",
+    "title": "AWS - API Gateway",
+    "section": "Authentication:",
+    "text": "Authentication:\n\nAuthorizers\nAs mentioned, APIGW can be configured with Authorizers. These are either AWS Lambda functions or Amazon Cognito pools that can be reused among multiple APIs and deployments.\nHere is a simple example with PingID: \n\n\nX-API-KEY\nThe other, sometimes more popular method, is using an API key that is passed as a header with each call. Here is a cURL example of this method\ncurl --location 'https://asdfg3j2gg.execute-api.us-east-1.amazonaws.com/prod/test' \\ --header 'x-api-key: 03c6ea58-1c08-4cc5-a570-816fe45e48bc'\nAPI Keys are associated with usage plans, that allow us to track API usage, which are then associated with deployed APIGW stages. You can also have multiple API keys tied to a usage plan.\nView any API keys below: \n\n\nSome notes about authentication types\nIt is generally bad practice to only provide one security solution, and to assume you are covered. Defense in depth should be the frame of mind for any developer or engineer. No security is also bad practice. Oftentimes, we will find developers that have created test endpoints with real world data, that are pulbic and unauthenticated. These should be deleted as soon as testing is complete. At a minimum, API keys are recommended, and easy to use.\nUse X-API-KEY (The key to get through the door):\n\nto provide entry level security to any endpoint\nfor testing sensitive APIs\nto track usage and metrics\n\nUse Authorizers (The bouncer at the door):\n\nfor user based access, in conjunction with an Identity Provider\nfor large scale deployments\nto provide various levels of access\n\nUse Both:\n\nthere is typically nothing stopping you from doing so…"
+  },
+  {
+    "objectID": "posts/random/git.html#overwrite-local-changes-with-a-pull",
+    "href": "posts/random/git.html#overwrite-local-changes-with-a-pull",
+    "title": "Git - Cheat Sheet",
+    "section": "",
+    "text": "caution: it will delete all untracked files\ngit clean -d -f and then\ngit pull origin master"
+  },
+  {
+    "objectID": "posts/random/http.html",
+    "href": "posts/random/http.html",
+    "title": "HTTP - Basic Overview",
+    "section": "",
+    "text": "Intro\nHypertext Transfer Protocol (HTTP) is an application layer protocol that handles the transmitting and recieving of data between clients and servers on the World Wide Web. Think of it as the rules of the web road, governing how data is sent, what format it must be in, and what to do if data is lost or doesn’t exist. Originally it was used for delivering requested media and HTML documents from server to client/browser. Today, since the transition from HTTP/0.9 (released in 1991) to HTTP/3 (introduced in June 2022), it has expanded to support many features that increases reliability, speed, and security.\n\nHere is a timeline of features that were added to each version\n\nHTTP/0.9 (1991)\n\nSingle line GET with html document\nRequest\n  GET /mypage.html\nResponse\n  &lt;html&gt;\n      A very simple HTML page\n  &lt;/html&gt;\n\n\n\nHTTP/1.0 (1996)\n\nSingle line GET with html document and version\nStatus code in response\nHeaders were introduced for Request and Response\nDocuments other than HTML could be passed with the Content-Type header\nRequest\n  GET /mypage.html HTTP/1.0\n  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)\nResponse\n  200 OK\n  Date: Tue, 15 Nov 1994 08:12:31 GMT\n  Server: CERN/3.0 libwww/2.17\n  Content-Type: text/html\n  &lt;HTML&gt;\n  A page with an image\n  &lt;IMG SRC=\"/myimage.gif\"&gt;\n  &lt;/HTML&gt;"
   }
 ]

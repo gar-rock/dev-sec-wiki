@@ -12,28 +12,43 @@ Here are some useful Git commands that are used
 ## Init and Create
 
 Start a new git envionment in your current working directory
+
 `git init`
 
+
 Connect your current git environment/directory to an upstream remote directory (ie. github/gitlab)
+
 `git remote add origin [url]`
 
+
 Configure user info
+
 `git config --global user.name "[name]"`
 `git config --global user.email "[email address]"`
 
+
 List current local branches
+
 `git branch`
 
+
 Create a new local branch
+
 `git branch [name]`
 
+
 Switch to another branch
+
 `git switch [name]`
 
+
 Switch to a new branch 
+
 `git switch -c [name]`
 
+
 Create and switch to new branch, and move any changes to
+
 `git branch -m [name]`
 
 
@@ -42,7 +57,19 @@ Create and switch to new branch, and move any changes to
 Save local changes in current directory to a branch
 `git add .`
 
+
 Save specific files to branch
 `git add [name of files]`
+
+
 Also supports wildcards, for example
 `git add *.py`
+
+
+## overwrite local changes with a pull
+caution: it will **delete all untracked files**
+
+`git clean -d -f`
+and then
+
+`git pull origin master`

@@ -6,6 +6,75 @@ categories: [aws]
 image: "apigw.png"
 ---
 
-# What Is It?
-A service that allows you to expose your compute resources and other services to the internet or interanl VPC.
+## What Is It?
+API Gateway is a web based service that allows you to expose your compute resources and other services to the internet or internal VPC.
 There are a number of security controls that are availble in APIGW that can be used to secure your compute. 
+
+# Supported features:
+- HTTP-based, GET, POST, PUT, PATCH, DELETE
+- Stateless (HTTP and REST) or stateful (WebSocket)
+- Support flexible authentication (api key and/or custom authorizers)
+- Canary release deployments
+- Custom domain names
+- Extensive logging
+- WAF
+- Public or Private (internal VPC)
+
+![Here is an example, where APIGW is serving up content from an S3 bucket and DynamoDB Table](http_overview_1.svg)
+
+## In the console
+To view the APIGWs navigate to the service:
+![nav1](apigw-1.png)
+
+If there are any APIs in the account then they will be listed here:
+![nav2](apigw-2.png)
+You can filter based on the API name or API ID.
+
+
+Click on the API to view details:
+![nav3](apigw-3.png)
+Notice the API ID and the available methods
+
+## Deployment:
+To expose an API to your clients, it has to be deployed in a "stage". This stage will contain extra configurations such are rate limiting, logging settings, ACLs, canary settings, certificates and caching behavior.   
+
+Navigate to the stages page to view the available Invoke URL:
+![nav4](apigw-4.png)
+
+## Authentication:
+#### Authorizers
+As mentioned, APIGW can be configured with Authorizers. These are either AWS Lambda functions or Amazon Cognito pools that can be reused among multiple APIs and deployments. 
+
+Here is a simple example with PingID:
+![nav4](apigw-5.png)
+
+#### X-API-KEY
+The other, sometimes more popular method, is using an API key that is passed as a header with each call. 
+Here is a cURL example of this method
+
+`curl --location 'https://asdfg3j2gg.execute-api.us-east-1.amazonaws.com/prod/test' \
+--header 'x-api-key: 03c6ea58-1c08-4cc5-a570-816fe45e48bc'`
+
+API Keys are associated with usage plans, that allow us to track API usage, which are then associated with deployed APIGW stages. You can also have multiple API keys tied to a usage plan. 
+
+View any API keys below:
+![nav5](apigw-6.png)
+
+#### Some notes about authentication types
+It is generally **bad** practice to only provide one security solution, and to assume you are covered. **Defense in depth** should be the frame of mind for any developer or engineer. No security is also bad practice. Oftentimes, we will find developers that have created test endpoints with real world data, that are pulbic and unauthenticated. These should be deleted as soon as testing is complete. At a minimum, API keys are recommended, and easy to use. 
+
+Use X-API-KEY (**The key to get through the door**):
+
+- to provide entry level security to any endpoint
+- for testing sensitive APIs
+- to track usage and metrics
+  
+Use Authorizers (**The bouncer at the door**):
+
+- for user based access, in conjunction with an Identity Provider
+- for large scale deployments
+- to provide various levels of access
+
+Use Both:
+
+- there is typically nothing stopping you from doing so...

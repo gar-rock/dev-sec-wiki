@@ -31,5 +31,8 @@
   },
   "posts/random/git.qmd": {
     "git.html": "37b7240f"
+  },
+  "posts/random/http.qmd": {
+    "http.html": "abd311d1"
   }
 }

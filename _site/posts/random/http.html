@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Garrison LeRock">
-<meta name="dcterms.date" content="2024-04-26">
+<meta name="dcterms.date" content="2024-05-02">
 
-<title>Dev-Sec-Wiki - AWS - API Gateway</title>
+<title>Dev-Sec-Wiki - HTTP - Basic Overview</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,9 +115,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">AWS - API Gateway</h1>
+      <h1 class="title">HTTP - Basic Overview</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">aws</div>
+                <div class="quarto-category">http</div>
+                <div class="quarto-category">random</div>
               </div>
                   </div>
   </div>
@@ -135,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 26, 2024</p>
+        <p class="date">May 2, 2024</p>
       </div>
     </div>
     
@@ -154,71 +155,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="what-is-it" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-it">What Is It?</h2>
-<p>API Gateway is a web based service that allows you to expose your compute resources and other services to the internet or internal VPC. There are a number of security controls that are availble in APIGW that can be used to secure your compute.</p>
-</section>
-<section id="supported-features" class="level1">
-<h1>Supported features:</h1>
+<section id="intro" class="level1">
+<h1>Intro</h1>
+<p>Hypertext Transfer Protocol (HTTP) is an application layer protocol that handles the transmitting and recieving of data between clients and servers on the World Wide Web. Think of it as the rules of the web road, governing how data is sent, what format it must be in, and what to do if data is lost or doesn’t exist. Originally it was used for delivering requested media and HTML documents from server to client/browser. Today, since the transition from HTTP/0.9 (released in 1991) to HTTP/3 (introduced in June 2022), it has expanded to support many features that increases reliability, speed, and security.</p>
+<section id="here-is-a-timeline-of-features-that-were-added-to-each-version" class="level3">
+<h3 class="anchored" data-anchor-id="here-is-a-timeline-of-features-that-were-added-to-each-version">Here is a timeline of features that were added to each version</h3>
+<section id="http0.9-1991" class="level4">
+<h4 class="anchored" data-anchor-id="http0.9-1991"><strong>HTTP/0.9</strong> (1991)</h4>
 <ul>
-<li>HTTP-based, GET, POST, PUT, PATCH, DELETE</li>
-<li>Stateless (HTTP and REST) or stateful (WebSocket)</li>
-<li>Support flexible authentication (api key and/or custom authorizers)</li>
-<li>Canary release deployments</li>
-<li>Custom domain names</li>
-<li>Extensive logging</li>
-<li>WAF</li>
-<li>Public or Private (internal VPC)</li>
+<li><p>Single line <strong>GET</strong> with html document</p>
+<p><strong>Request</strong></p>
+<pre><code>  GET /mypage.html</code></pre>
+<p><strong>Response</strong></p>
+<pre><code>  &lt;html&gt;
+      A very simple HTML page
+  &lt;/html&gt;</code></pre></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="http_overview_1.svg" class="img-fluid figure-img"></p>
-<figcaption>Here is an example, where APIGW is serving up content from an S3 bucket and DynamoDB Table</figcaption>
-</figure>
-</div>
-<section id="in-the-console" class="level2">
-<h2 class="anchored" data-anchor-id="in-the-console">In the console</h2>
-<p>To view the APIGWs navigate to the service: <img src="apigw-1.png" class="img-fluid" alt="nav1"></p>
-<p>If there are any APIs in the account then they will be listed here: <img src="apigw-2.png" class="img-fluid" alt="nav2"> You can filter based on the API name or API ID.</p>
-<p>Click on the API to view details: <img src="apigw-3.png" class="img-fluid" alt="nav3"> Notice the API ID and the available methods</p>
 </section>
-<section id="deployment" class="level2">
-<h2 class="anchored" data-anchor-id="deployment">Deployment:</h2>
-<p>To expose an API to your clients, it has to be deployed in a “stage”. This stage will contain extra configurations such are rate limiting, logging settings, ACLs, canary settings, certificates and caching behavior.</p>
-<p>Navigate to the stages page to view the available Invoke URL: <img src="apigw-4.png" class="img-fluid" alt="nav4"></p>
-</section>
-<section id="authentication" class="level2">
-<h2 class="anchored" data-anchor-id="authentication">Authentication:</h2>
-<section id="authorizers" class="level4">
-<h4 class="anchored" data-anchor-id="authorizers">Authorizers</h4>
-<p>As mentioned, APIGW can be configured with Authorizers. These are either AWS Lambda functions or Amazon Cognito pools that can be reused among multiple APIs and deployments.</p>
-<p>Here is a simple example with PingID: <img src="apigw-5.png" class="img-fluid" alt="nav4"></p>
-</section>
-<section id="x-api-key" class="level4">
-<h4 class="anchored" data-anchor-id="x-api-key">X-API-KEY</h4>
-<p>The other, sometimes more popular method, is using an API key that is passed as a header with each call. Here is a cURL example of this method</p>
-<p><code>curl --location 'https://asdfg3j2gg.execute-api.us-east-1.amazonaws.com/prod/test' \ --header 'x-api-key: 03c6ea58-1c08-4cc5-a570-816fe45e48bc'</code></p>
-<p>API Keys are associated with usage plans, that allow us to track API usage, which are then associated with deployed APIGW stages. You can also have multiple API keys tied to a usage plan.</p>
-<p>View any API keys below: <img src="apigw-6.png" class="img-fluid" alt="nav5"></p>
-</section>
-<section id="some-notes-about-authentication-types" class="level4">
-<h4 class="anchored" data-anchor-id="some-notes-about-authentication-types">Some notes about authentication types</h4>
-<p>It is generally <strong>bad</strong> practice to only provide one security solution, and to assume you are covered. <strong>Defense in depth</strong> should be the frame of mind for any developer or engineer. No security is also bad practice. Oftentimes, we will find developers that have created test endpoints with real world data, that are pulbic and unauthenticated. These should be deleted as soon as testing is complete. At a minimum, API keys are recommended, and easy to use.</p>
-<p>Use X-API-KEY (<strong>The key to get through the door</strong>):</p>
+<section id="http1.0-1996" class="level4">
+<h4 class="anchored" data-anchor-id="http1.0-1996"><strong>HTTP/1.0</strong> (1996)</h4>
 <ul>
-<li>to provide entry level security to any endpoint</li>
-<li>for testing sensitive APIs</li>
-<li>to track usage and metrics</li>
-</ul>
-<p>Use Authorizers (<strong>The bouncer at the door</strong>):</p>
-<ul>
-<li>for user based access, in conjunction with an Identity Provider</li>
-<li>for large scale deployments</li>
-<li>to provide various levels of access</li>
-</ul>
-<p>Use Both:</p>
-<ul>
-<li>there is typically nothing stopping you from doing so…</li>
+<li><p>Single line <strong>GET</strong> with html document and version</p></li>
+<li><p>Status code in response</p></li>
+<li><p>Headers were introduced for Request and Response</p></li>
+<li><p>Documents other than HTML could be passed with the Content-Type header</p>
+<p><strong>Request</strong></p>
+<pre><code>  GET /mypage.html HTTP/1.0
+  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)</code></pre>
+<p><strong>Response</strong></p>
+<pre><code>  200 OK
+  Date: Tue, 15 Nov 1994 08:12:31 GMT
+  Server: CERN/3.0 libwww/2.17
+  Content-Type: text/html
+  &lt;HTML&gt;
+  A page with an image
+  &lt;IMG SRC="/myimage.gif"&gt;
+  &lt;/HTML&gt;</code></pre></li>
 </ul>
 
 
