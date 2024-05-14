@@ -4,14 +4,42 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Git - Cheat Sheet\n\n\n\n\n\n\ngit\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nAWS - API Gateway\n\n\n\n\n\n\naws\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nPython- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown Cheat Sheet\n\n\n\n\n\n\nmarkdown\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nStolen from markdownguiade.org\n\n\n\n\n\n\n\n\n\n\n\n\nSSH keys - Useful Information\n\n\n\n\n\n\nssh\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\nNo matching items"
+    "text": "HTTP - Basic Overview\n\n\n\n\n\n\nhttp\n\n\nrandom\n\n\n\n\n\n\n\n\n\nMay 2, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nGit - Cheat Sheet\n\n\n\n\n\n\ngit\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nAWS - API Gateway\n\n\n\n\n\n\naws\n\n\n\n\n\n\n\n\n\nApr 26, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nPython- Virtual Environments\n\n\n\n\n\n\npython\n\n\n\n\n\n\n\n\n\nApr 25, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown Cheat Sheet\n\n\n\n\n\n\nmarkdown\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nStolen from markdownguiade.org\n\n\n\n\n\n\n\n\n\n\n\n\nSSH keys - Useful Information\n\n\n\n\n\n\nssh\n\n\nrandom\n\n\n\n\n\n\n\n\n\nApr 24, 2024\n\n\nGarrison LeRock\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/aws/apigw.html",
     "href": "posts/aws/apigw.html",
     "title": "AWS - API Gateway",
     "section": "",
-    "text": "What Is It?\nA service that allows you to expose your compute resources and other services to the internet or interanl VPC. There are a number of security controls that are availble in APIGW that can be used to secure your compute."
+    "text": "API Gateway is a web based service that allows you to expose your compute resources and other services to the internet or internal VPC. There are a number of security controls that are availble in APIGW that can be used to secure your compute."
+  },
+  {
+    "objectID": "posts/aws/apigw.html#what-is-it",
+    "href": "posts/aws/apigw.html#what-is-it",
+    "title": "AWS - API Gateway",
+    "section": "",
+    "text": "API Gateway is a web based service that allows you to expose your compute resources and other services to the internet or internal VPC. There are a number of security controls that are availble in APIGW that can be used to secure your compute."
+  },
+  {
+    "objectID": "posts/aws/apigw.html#in-the-console",
+    "href": "posts/aws/apigw.html#in-the-console",
+    "title": "AWS - API Gateway",
+    "section": "In the console",
+    "text": "In the console\nTo view the APIGWs navigate to the service: \nIf there are any APIs in the account then they will be listed here:  You can filter based on the API name or API ID.\nClick on the API to view details:  Notice the API ID and the available methods"
+  },
+  {
+    "objectID": "posts/aws/apigw.html#deployment",
+    "href": "posts/aws/apigw.html#deployment",
+    "title": "AWS - API Gateway",
+    "section": "Deployment:",
+    "text": "Deployment:\nTo expose an API to your clients, it has to be deployed in a “stage”. This stage will contain extra configurations such are rate limiting, logging settings, ACLs, canary settings, certificates and caching behavior.\nNavigate to the stages page to view the available Invoke URL:"
+  },
+  {
+    "objectID": "posts/aws/apigw.html#authentication",
+    "href": "posts/aws/apigw.html#authentication",
+    "title": "AWS - API Gateway",
+    "section": "Authentication:",
+    "text": "Authentication:\n\nAuthorizers\nAs mentioned, APIGW can be configured with Authorizers. These are either AWS Lambda functions or Amazon Cognito pools that can be reused among multiple APIs and deployments.\nHere is a simple example with PingID: \n\n\nX-API-KEY\nThe other, sometimes more popular method, is using an API key that is passed as a header with each call. Here is a cURL example of this method\ncurl --location 'https://asdfg3j2gg.execute-api.us-east-1.amazonaws.com/prod/test' \\ --header 'x-api-key: 03c6ea58-1c08-4cc5-a570-816fe45e48bc'\nAPI Keys are associated with usage plans, that allow us to track API usage, which are then associated with deployed APIGW stages. You can also have multiple API keys tied to a usage plan.\nView any API keys below: \n\n\nSome notes about authentication types\nIt is generally bad practice to only provide one security solution, and to assume you are covered. Defense in depth should be the frame of mind for any developer or engineer. No security is also bad practice. Oftentimes, we will find developers that have created test endpoints with real world data, that are pulbic and unauthenticated. These should be deleted as soon as testing is complete. At a minimum, API keys are recommended, and easy to use.\nUse X-API-KEY (The key to get through the door):\n\nto provide entry level security to any endpoint\nfor testing sensitive APIs\nto track usage and metrics\n\nUse Authorizers (The bouncer at the door):\n\nfor user based access, in conjunction with an Identity Provider\nfor large scale deployments\nto provide various levels of access\n\nUse Both:\n\nthere is typically nothing stopping you from doing so…"
   },
   {
     "objectID": "posts/random/ssh_keys.html",
@@ -19,13 +47,6 @@
     "title": "SSH keys - Useful Information",
     "section": "",
     "text": "Intro\nAs a developer you will typically use SSH keys for pushing/pulling code on a remote repo. You will need to generate a public and private key locally on your machine, and then upload your public key to your repo settings. Typically you will sign your private key (with a unique password) that only you know.\n\n\nUseful Information\nYou can generate a new SSH key on your local linux machine with this command.\nssh-keygen -t ed25519 -C \"your_email@example.com\"\nIf you have multiple Keys to use for various remote repos… for example Github and GitLab, or maybe one for your company’s GitHub, and another for your private GitHub, you can update the config file in the .ssh directory to point to various keys.\n\nCreate the config file is it doesn’t exist touch ~/.ssh/config\nEdit the file nano ~/.ssh/config\nHere is an example for when you might have 3 accounts\n\n# github account\nHost github.com\nHostName github.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_myaccount_github\n\n# gitlab account\nHost gitlab.com\nHostName gitlab.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_myaccount_gitlab\n\n# gitlab company account\nHost gitlab.my_company.com\nHostName gitlab.my_company.com\nPreferredAuthentications publickey\nIdentityFile ~/.ssh/id_rsa_mycompanyaccount_gitlab"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This wiki is managed by Garrison LeRock via Quarto and Github Pages. The public repo can be found here.\nMost of the articles found here are what I might use on a day-to-day basis. When I forget a certain detail it’s nice to have it documented and easily referenceable."
   },
   {
     "objectID": "posts/random/markdown.html",
@@ -63,25 +84,74 @@
     "text": "Footnotes\n\n\nThis is the footnote.↩︎"
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This wiki is managed by Garrison LeRock via Quarto and Github Pages. The public repo can be found here.\nMost of the articles found here are what I might use on a day-to-day basis. When I forget a certain detail it’s nice to have it documented and easily referenceable."
+  },
+  {
+    "objectID": "posts/random/http.html",
+    "href": "posts/random/http.html",
+    "title": "HTTP - Basic Overview",
+    "section": "",
+    "text": "Hypertext Transfer Protocol (HTTP) is an application layer protocol that handles the transmitting and recieving of data between clients and servers on the World Wide Web. Think of it as the rules of the web road, governing how data is sent, what format it must be in, and what to do if data is lost or doesn’t exist. Originally it was used for delivering requested media and HTML documents from server to client/browser. Today, since the transition from HTTP/0.9 (released in 1991) to HTTP/3 (introduced in June 2022), it has expanded to support many features that increases reliability, speed, and security.\n\n\n\n\n\n\nSingle line GET with html document\nRequest\n  GET /mypage.html\nResponse\n  &lt;html&gt;\n      A very simple HTML page\n  &lt;/html&gt;\n\n\n\n\n\nSingle line GET with html document and version\nStatus code in response\nHeaders were introduced for Request and Response\nDocuments other than HTML could be passed with the Content-Type header\nRequest\n  GET /mypage.html HTTP/1.0\n  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)\nResponse\n  200 OK\n  Date: Tue, 15 Nov 1994 08:12:31 GMT\n  Server: CERN/3.0 libwww/2.17\n  Content-Type: text/html\n  &lt;HTML&gt;\n  A page with an image\n  &lt;IMG SRC=\"/myimage.gif\"&gt;\n  &lt;/HTML&gt;\nFollowed by a second request for the image “myimage.gif”\nRequest\n  GET /myimage.gif HTTP/1.0\n  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)\nResponse\n  200 OK\n  Date: Tue, 15 Nov 1994 08:12:32 GMT\n  Server: CERN/3.0 libwww/2.17\n  Content-Type: text/gif\n  (image content)\n\nAdditional Method Requests such as PUT, POST, DELETE, LINK, UNLINK were introduced but not widely accepted.\n\n\n\n\n\n\nThe official standardized HTTP protocol\nConnections could be reused, and data chunked, whihc improved latency\nContent negotiation and additional caching features improved browser speed\nHost header was added, which allowed for server collocation on different domains\nRequest\n  GET /en-US/docs/Glossary/CORS-safelisted_request_header HTTP/1.1\n  Host: developer.mozilla.org\n  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0\n  Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\n  Accept-Language: en-US,en;q=0.5\n  Accept-Encoding: gzip, deflate, br\n  Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header\nResponse\n  200 OK\n  Connection: Keep-Alive\n  Content-Encoding: gzip\n  Content-Type: text/html; charset=utf-8\n  Date: Wed, 20 Jul 2016 10:55:30 GMT\n  Etag: \"547fa7e369ef56031dd3bff2ace9fc0832eb251a\"\n  Keep-Alive: timeout=5, max=1000\n  Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT\n  Server: Apache\n  Transfer-Encoding: chunked\n  Vary: Cookie, Accept-Encoding\n\n  (content)\nRequest\n  GET /static/img/header-background.png HTTP/1.1\n  Host: developer.mozilla.org\n  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0\n  Accept: */*\n  Accept-Language: en-US,en;q=0.5\n  Accept-Encoding: gzip, deflate, br\n  Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header\nResponse\n  200 OK\n  Age: 9578461\n  Cache-Control: public, max-age=315360000\n  Connection: keep-alive\n  Content-Length: 3077\n  Content-Type: image/png\n  Date: Thu, 31 Mar 2016 13:34:46 GMT\n  Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT\n  Server: Apache\n\n  (image content of 3077 bytes)\n\nWith the stability provided in HTTP/1.1 companies such as NetScape and Microsoft began to improve upon various aspects of the protocol\nAdditional features included encryption through SSL from Netscape\nsame-origin policy was adopted, along with Cross-Origin Resource Sharing (CORS) and Content Security Policy (CSP)\n\n\n\n\n\n\nThe next official update to HTTP, which enabled better network efficiency, reduce latency\nIncludes header compression on duplicate calls\nIncludes multiplexing on the same connections\nKeeps HTTP/1.1 semantics and messages syntax\nlargely prioneered by Google"
+  },
+  {
+    "objectID": "posts/random/http.html#http0.9-1991",
+    "href": "posts/random/http.html#http0.9-1991",
+    "title": "HTTP - Basic Overview",
+    "section": "",
+    "text": "Single line GET with html document\nRequest\n  GET /mypage.html\nResponse\n  &lt;html&gt;\n      A very simple HTML page\n  &lt;/html&gt;"
+  },
+  {
+    "objectID": "posts/random/http.html#http1.0-1996-rfc1945---refers-to-both-0.9-and-1.0",
+    "href": "posts/random/http.html#http1.0-1996-rfc1945---refers-to-both-0.9-and-1.0",
+    "title": "HTTP - Basic Overview",
+    "section": "",
+    "text": "Single line GET with html document and version\nStatus code in response\nHeaders were introduced for Request and Response\nDocuments other than HTML could be passed with the Content-Type header\nRequest\n  GET /mypage.html HTTP/1.0\n  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)\nResponse\n  200 OK\n  Date: Tue, 15 Nov 1994 08:12:31 GMT\n  Server: CERN/3.0 libwww/2.17\n  Content-Type: text/html\n  &lt;HTML&gt;\n  A page with an image\n  &lt;IMG SRC=\"/myimage.gif\"&gt;\n  &lt;/HTML&gt;\nFollowed by a second request for the image “myimage.gif”\nRequest\n  GET /myimage.gif HTTP/1.0\n  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)\nResponse\n  200 OK\n  Date: Tue, 15 Nov 1994 08:12:32 GMT\n  Server: CERN/3.0 libwww/2.17\n  Content-Type: text/gif\n  (image content)\n\nAdditional Method Requests such as PUT, POST, DELETE, LINK, UNLINK were introduced but not widely accepted."
+  },
+  {
+    "objectID": "posts/random/http.html#http1.1-1997-rfc2068",
+    "href": "posts/random/http.html#http1.1-1997-rfc2068",
+    "title": "HTTP - Basic Overview",
+    "section": "",
+    "text": "The official standardized HTTP protocol\nConnections could be reused, and data chunked, whihc improved latency\nContent negotiation and additional caching features improved browser speed\nHost header was added, which allowed for server collocation on different domains\nRequest\n  GET /en-US/docs/Glossary/CORS-safelisted_request_header HTTP/1.1\n  Host: developer.mozilla.org\n  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0\n  Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\n  Accept-Language: en-US,en;q=0.5\n  Accept-Encoding: gzip, deflate, br\n  Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header\nResponse\n  200 OK\n  Connection: Keep-Alive\n  Content-Encoding: gzip\n  Content-Type: text/html; charset=utf-8\n  Date: Wed, 20 Jul 2016 10:55:30 GMT\n  Etag: \"547fa7e369ef56031dd3bff2ace9fc0832eb251a\"\n  Keep-Alive: timeout=5, max=1000\n  Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT\n  Server: Apache\n  Transfer-Encoding: chunked\n  Vary: Cookie, Accept-Encoding\n\n  (content)\nRequest\n  GET /static/img/header-background.png HTTP/1.1\n  Host: developer.mozilla.org\n  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0\n  Accept: */*\n  Accept-Language: en-US,en;q=0.5\n  Accept-Encoding: gzip, deflate, br\n  Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header\nResponse\n  200 OK\n  Age: 9578461\n  Cache-Control: public, max-age=315360000\n  Connection: keep-alive\n  Content-Length: 3077\n  Content-Type: image/png\n  Date: Thu, 31 Mar 2016 13:34:46 GMT\n  Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT\n  Server: Apache\n\n  (image content of 3077 bytes)\n\nWith the stability provided in HTTP/1.1 companies such as NetScape and Microsoft began to improve upon various aspects of the protocol\nAdditional features included encryption through SSL from Netscape\nsame-origin policy was adopted, along with Cross-Origin Resource Sharing (CORS) and Content Security Policy (CSP)"
+  },
+  {
+    "objectID": "posts/random/http.html#http2-1997-7540",
+    "href": "posts/random/http.html#http2-1997-7540",
+    "title": "HTTP - Basic Overview",
+    "section": "",
+    "text": "The next official update to HTTP, which enabled better network efficiency, reduce latency\nIncludes header compression on duplicate calls\nIncludes multiplexing on the same connections\nKeeps HTTP/1.1 semantics and messages syntax\nlargely prioneered by Google"
+  },
+  {
     "objectID": "posts/random/git.html",
     "href": "posts/random/git.html",
     "title": "Git - Cheat Sheet",
     "section": "",
-    "text": "Here are some useful Git commands that are used\n\n\nStart a new git envionment in your current working directory git init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab) git remote add origin [url]\nConfigure user info git config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches git branch\nCreate a new local branch git branch [name]\nSwitch to another branch git switch [name]\nSwitch to a new branch git switch -c [name]\nCreate and switch to new branch, and move any changes to git branch -m [name]\n\n\n\nSave local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files] Also supports wildcards, for example git add *.py"
+    "text": "Here are some useful Git commands that are used\n\n\nStart a new git envionment in your current working directory\ngit init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab)\ngit remote add origin [url]\nConfigure user info\ngit config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches\ngit branch\nCreate a new local branch\ngit branch [name]\nSwitch to another branch\ngit switch [name]\nSwitch to a new branch\ngit switch -c [name]\nCreate and switch to new branch, and move any changes to\ngit branch -m [name]\n\n\n\nSave local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files]\nAlso supports wildcards, for example git add *.py\n\n\n\ncaution: it will delete all untracked files\ngit clean -d -f and then\ngit pull origin master"
   },
   {
     "objectID": "posts/random/git.html#init-and-create",
     "href": "posts/random/git.html#init-and-create",
     "title": "Git - Cheat Sheet",
     "section": "",
-    "text": "Start a new git envionment in your current working directory git init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab) git remote add origin [url]\nConfigure user info git config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches git branch\nCreate a new local branch git branch [name]\nSwitch to another branch git switch [name]\nSwitch to a new branch git switch -c [name]\nCreate and switch to new branch, and move any changes to git branch -m [name]"
+    "text": "Start a new git envionment in your current working directory\ngit init\nConnect your current git environment/directory to an upstream remote directory (ie. github/gitlab)\ngit remote add origin [url]\nConfigure user info\ngit config --global user.name \"[name]\" git config --global user.email \"[email address]\"\nList current local branches\ngit branch\nCreate a new local branch\ngit branch [name]\nSwitch to another branch\ngit switch [name]\nSwitch to a new branch\ngit switch -c [name]\nCreate and switch to new branch, and move any changes to\ngit branch -m [name]"
   },
   {
     "objectID": "posts/random/git.html#commit-and-push",
     "href": "posts/random/git.html#commit-and-push",
     "title": "Git - Cheat Sheet",
     "section": "",
-    "text": "Save local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files] Also supports wildcards, for example git add *.py"
+    "text": "Save local changes in current directory to a branch git add .\nSave specific files to branch git add [name of files]\nAlso supports wildcards, for example git add *.py"
+  },
+  {
+    "objectID": "posts/random/git.html#overwrite-local-changes-with-a-pull",
+    "href": "posts/random/git.html#overwrite-local-changes-with-a-pull",
+    "title": "Git - Cheat Sheet",
+    "section": "",
+    "text": "caution: it will delete all untracked files\ngit clean -d -f and then\ngit pull origin master"
   },
   {
     "objectID": "posts/python/venv.html",

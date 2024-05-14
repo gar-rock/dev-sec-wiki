@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -160,19 +160,34 @@ ul.task-list li input[type="checkbox"] {
 <p>Here are some useful Git commands that are used</p>
 <section id="init-and-create" class="level2">
 <h2 class="anchored" data-anchor-id="init-and-create">Init and Create</h2>
-<p>Start a new git envionment in your current working directory <code>git init</code></p>
-<p>Connect your current git environment/directory to an upstream remote directory (ie. github/gitlab) <code>git remote add origin [url]</code></p>
-<p>Configure user info <code>git config --global user.name "[name]"</code> <code>git config --global user.email "[email address]"</code></p>
-<p>List current local branches <code>git branch</code></p>
-<p>Create a new local branch <code>git branch [name]</code></p>
-<p>Switch to another branch <code>git switch [name]</code></p>
-<p>Switch to a new branch <code>git switch -c [name]</code></p>
-<p>Create and switch to new branch, and move any changes to <code>git branch -m [name]</code></p>
+<p>Start a new git envionment in your current working directory</p>
+<p><code>git init</code></p>
+<p>Connect your current git environment/directory to an upstream remote directory (ie. github/gitlab)</p>
+<p><code>git remote add origin [url]</code></p>
+<p>Configure user info</p>
+<p><code>git config --global user.name "[name]"</code> <code>git config --global user.email "[email address]"</code></p>
+<p>List current local branches</p>
+<p><code>git branch</code></p>
+<p>Create a new local branch</p>
+<p><code>git branch [name]</code></p>
+<p>Switch to another branch</p>
+<p><code>git switch [name]</code></p>
+<p>Switch to a new branch</p>
+<p><code>git switch -c [name]</code></p>
+<p>Create and switch to new branch, and move any changes to</p>
+<p><code>git branch -m [name]</code></p>
 </section>
 <section id="commit-and-push" class="level2">
 <h2 class="anchored" data-anchor-id="commit-and-push">Commit and Push</h2>
 <p>Save local changes in current directory to a branch <code>git add .</code></p>
-<p>Save specific files to branch <code>git add [name of files]</code> Also supports wildcards, for example <code>git add *.py</code></p>
+<p>Save specific files to branch <code>git add [name of files]</code></p>
+<p>Also supports wildcards, for example <code>git add *.py</code></p>
+</section>
+<section id="overwrite-local-changes-with-a-pull" class="level2">
+<h2 class="anchored" data-anchor-id="overwrite-local-changes-with-a-pull">overwrite local changes with a pull</h2>
+<p>caution: it will <strong>delete all untracked files</strong></p>
+<p><code>git clean -d -f</code> and then</p>
+<p><code>git pull origin master</code></p>
 
 
 </section>
