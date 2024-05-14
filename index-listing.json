@@ -1,0 +1,11 @@
+{
+  "listing": "/index.html",
+  "items": [
+    "/posts/random/http.html",
+    "/posts/random/git.html",
+    "/posts/aws/apigw.html",
+    "/posts/python/venv.html",
+    "/posts/random/markdown.html",
+    "/posts/random/ssh_keys.html"
+  ]
+}

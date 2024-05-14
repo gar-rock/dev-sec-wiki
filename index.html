@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Garrison LeRock">
-<meta name="dcterms.date" content="2024-05-02">
 
-<title>Dev-Sec-Wiki - HTTP - Basic Overview</title>
+<title>Dev-Sec-Wiki - Home</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,22 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,19 +68,77 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="../../styles.css">
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Dev-Sec-Wiki</span>
     </a>
   </div>
@@ -91,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -114,158 +172,254 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">HTTP - Basic Overview</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">http</div>
-                <div class="quarto-category">random</div>
-              </div>
-                  </div>
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Home</h1>
+                      </div>
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Garrison LeRock </p>
-            </div>
-    </div>
       
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">May 2, 2024</p>
-      </div>
-    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="aws">aws <span class="quarto-category-count">(1)</span></div><div class="category" data-category="git">git <span class="quarto-category-count">(1)</span></div><div class="category" data-category="http">http <span class="quarto-category-count">(1)</span></div><div class="category" data-category="markdown">markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="random">random <span class="quarto-category-count">(4)</span></div><div class="category" data-category="ssh">ssh <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
-<section id="intro" class="level1">
-<h1>Intro</h1>
-<p>Hypertext Transfer Protocol (HTTP) is an application layer protocol that handles the transmitting and recieving of data between clients and servers on the World Wide Web. Think of it as the rules of the web road, governing how data is sent, what format it must be in, and what to do if data is lost or doesn’t exist. Originally it was used for delivering requested media and HTML documents from server to client/browser. Today, since the transition from HTTP/0.9 (released in 1991) to HTTP/3 (introduced in June 2022), it has expanded to support many features that increases reliability, speed, and security.</p>
-<section id="here-is-a-timeline-of-features-that-were-added-to-each-version" class="level3">
-<h3 class="anchored" data-anchor-id="here-is-a-timeline-of-features-that-were-added-to-each-version">Here is a timeline of features that were added to each version</h3>
-</section>
-<section id="http0.9-1991" class="level2">
-<h2 class="anchored" data-anchor-id="http0.9-1991">#### <strong>HTTP/0.9</strong> (1991)</h2>
-<ul>
-<li><p>Single line <strong>GET</strong> with html document</p>
-<p><strong>Request</strong></p>
-<pre><code>  GET /mypage.html</code></pre>
-<p><strong>Response</strong></p>
-<pre><code>  &lt;html&gt;
-      A very simple HTML page
-  &lt;/html&gt;</code></pre></li>
-</ul>
-</section>
-<section id="http1.0-1996-rfc1945---refers-to-both-0.9-and-1.0" class="level2">
-<h2 class="anchored" data-anchor-id="http1.0-1996-rfc1945---refers-to-both-0.9-and-1.0">#### <strong>HTTP/1.0</strong> (1996) <a href="https://datatracker.ietf.org/doc/html/rfc1945">RFC1945</a> - Refers to both 0.9 and 1.0</h2>
-<ul>
-<li><p>Single line <strong>GET</strong> with html document and version</p></li>
-<li><p>Status code in response</p></li>
-<li><p>Headers were introduced for Request and Response</p></li>
-<li><p>Documents other than HTML could be passed with the Content-Type header</p>
-<p><strong>Request</strong></p>
-<pre><code>  GET /mypage.html HTTP/1.0
-  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)</code></pre>
-<p><strong>Response</strong></p>
-<pre><code>  200 OK
-  Date: Tue, 15 Nov 1994 08:12:31 GMT
-  Server: CERN/3.0 libwww/2.17
-  Content-Type: text/html
-  &lt;HTML&gt;
-  A page with an image
-  &lt;IMG SRC="/myimage.gif"&gt;
-  &lt;/HTML&gt;</code></pre>
-<p>Followed by a second request for the image “myimage.gif”</p>
-<p><strong>Request</strong></p>
-<pre><code>  GET /myimage.gif HTTP/1.0
-  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)</code></pre>
-<p><strong>Response</strong></p>
-<pre><code>  200 OK
-  Date: Tue, 15 Nov 1994 08:12:32 GMT
-  Server: CERN/3.0 libwww/2.17
-  Content-Type: text/gif
-  (image content)</code></pre>
-<ul>
-<li>Additional Method Requests such as PUT, POST, DELETE, LINK, UNLINK were introduced but not widely accepted.</li>
-</ul></li>
-</ul>
-</section>
-<section id="http1.1-1997-rfc2068" class="level2">
-<h2 class="anchored" data-anchor-id="http1.1-1997-rfc2068">#### <strong>HTTP/1.1</strong> (1997) <a href="https://datatracker.ietf.org/doc/html/rfc2068#section-9.5">RFC2068</a></h2>
-<ul>
-<li><p>The official standardized HTTP protocol</p></li>
-<li><p>Connections could be reused, and data chunked, whihc improved latency</p></li>
-<li><p>Content negotiation and additional caching features improved browser speed</p></li>
-<li><p>Host header was added, which allowed for server collocation on different domains</p>
-<p><strong>Request</strong></p>
-<pre><code>  GET /en-US/docs/Glossary/CORS-safelisted_request_header HTTP/1.1
-  Host: developer.mozilla.org
-  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-  Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-  Accept-Language: en-US,en;q=0.5
-  Accept-Encoding: gzip, deflate, br
-  Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header</code></pre>
-<p><strong>Response</strong></p>
-<pre><code>  200 OK
-  Connection: Keep-Alive
-  Content-Encoding: gzip
-  Content-Type: text/html; charset=utf-8
-  Date: Wed, 20 Jul 2016 10:55:30 GMT
-  Etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
-  Keep-Alive: timeout=5, max=1000
-  Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT
-  Server: Apache
-  Transfer-Encoding: chunked
-  Vary: Cookie, Accept-Encoding
-
-  (content)</code></pre>
-<p><strong>Request</strong></p>
-<pre><code>  GET /static/img/header-background.png HTTP/1.1
-  Host: developer.mozilla.org
-  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-  Accept: */*
-  Accept-Language: en-US,en;q=0.5
-  Accept-Encoding: gzip, deflate, br
-  Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header</code></pre>
-<p><strong>Response</strong></p>
-<pre><code>  200 OK
-  Age: 9578461
-  Cache-Control: public, max-age=315360000
-  Connection: keep-alive
-  Content-Length: 3077
-  Content-Type: image/png
-  Date: Thu, 31 Mar 2016 13:34:46 GMT
-  Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT
-  Server: Apache
-
-  (image content of 3077 bytes)</code></pre>
-<ul>
-<li>Additional Method Requests such as PUT, POST, DELETE, LINK, UNLINK were introduced but not widely accepted.</li>
-</ul></li>
-</ul>
 
 
-</section>
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="http,random" data-listing-date-sort="1714626000000" data-listing-file-modified-sort="1715720638266" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1051">
+<div class="thumbnail">
+<p><a href="./posts/random/http.html" class="no-external"></a></p><a href="./posts/random/http.html" class="no-external">
+<p><img src="./posts/random/http.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/random/http.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/random/http.html" class="no-external">HTTP - Basic Overview</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/random/http.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('http'); return false;">
+http
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('random'); return false;">
+random
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/random/http.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/random/http.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/random/http.html" class="no-external">
+<div class="listing-date">
+May 2, 2024
+</div>
+<div class="listing-author">
+Garrison LeRock
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="git,random" data-listing-date-sort="1714107600000" data-listing-file-modified-sort="1714675378220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="131">
+<div class="thumbnail">
+<p><a href="./posts/random/git.html" class="no-external"></a></p><a href="./posts/random/git.html" class="no-external">
+<p><img src="./posts/random/git.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/random/git.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/random/git.html" class="no-external">Git - Cheat Sheet</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/random/git.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('git'); return false;">
+git
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('random'); return false;">
+random
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/random/git.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/random/git.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/random/git.html" class="no-external">
+<div class="listing-date">
+Apr 26, 2024
+</div>
+<div class="listing-author">
+Garrison LeRock
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="aws" data-listing-date-sort="1714107600000" data-listing-file-modified-sort="1714676420550" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
+<div class="thumbnail">
+<p><a href="./posts/aws/apigw.html" class="no-external"></a></p><a href="./posts/aws/apigw.html" class="no-external">
+<p><img src="./posts/aws/apigw.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/aws/apigw.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/aws/apigw.html" class="no-external">AWS - API Gateway</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/aws/apigw.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('aws'); return false;">
+aws
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/aws/apigw.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/aws/apigw.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/aws/apigw.html" class="no-external">
+<div class="listing-date">
+Apr 26, 2024
+</div>
+<div class="listing-author">
+Garrison LeRock
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="python" data-listing-date-sort="1714021200000" data-listing-file-modified-sort="1714071048757" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="135">
+<div class="thumbnail">
+<p><a href="./posts/python/venv.html" class="no-external"></a></p><a href="./posts/python/venv.html" class="no-external">
+<p><img src="./posts/python/snake.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/python/venv.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/python/venv.html" class="no-external">Python- Virtual Environments</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/python/venv.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/python/venv.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/python/venv.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/python/venv.html" class="no-external">
+<div class="listing-date">
+Apr 25, 2024
+</div>
+<div class="listing-author">
+Garrison LeRock
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="markdown,random" data-listing-date-sort="1713934800000" data-listing-file-modified-sort="1714071023487" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="206">
+<div class="thumbnail">
+<p><a href="./posts/random/markdown.html" class="no-external"></a></p><a href="./posts/random/markdown.html" class="no-external">
+<p><img src="./posts/random/markdown.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/random/markdown.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/random/markdown.html" class="no-external">Markdown Cheat Sheet</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/random/markdown.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('markdown'); return false;">
+markdown
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('random'); return false;">
+random
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/random/markdown.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/random/markdown.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/random/markdown.html" class="no-external">
+<div class="listing-date">
+Apr 24, 2024
+</div>
+</a><div class="listing-author"><a href="./posts/random/markdown.html" class="no-external">
+Stolen from </a><a href="https://www.markdownguide.org/cheat-sheet/">markdownguiade.org</a>
+</div>
+
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="ssh,random" data-listing-date-sort="1713934800000" data-listing-file-modified-sort="1714157305836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
+<div class="thumbnail">
+<p><a href="./posts/random/ssh_keys.html" class="no-external"></a></p><a href="./posts/random/ssh_keys.html" class="no-external">
+<p><img src="./posts/random/ssh_keys.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/random/ssh_keys.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/random/ssh_keys.html" class="no-external">SSH keys - Useful Information</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/random/ssh_keys.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ssh'); return false;">
+ssh
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('random'); return false;">
+random
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/random/ssh_keys.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/random/ssh_keys.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/random/ssh_keys.html" class="no-external">
+<div class="listing-date">
+Apr 24, 2024
+</div>
+<div class="listing-author">
+Garrison LeRock
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
