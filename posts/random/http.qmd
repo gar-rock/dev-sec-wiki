@@ -140,3 +140,9 @@ Today, since the transition from HTTP/0.9 (released in 1991) to HTTP/3 (introduc
 - Includes multiplexing on the same connections
 - Keeps HTTP/1.1 semantics and messages syntax
 - largely prioneered by Google
+
+
+#### History of HTTP Timeline
+
+
+<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=10xkezz3JEOy6Y4jReuiLmHfIu1OxK8vh9kJ-hiOq0x4&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
